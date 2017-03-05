@@ -1,5 +1,5 @@
-val dataset = sc.textFile("/tmp/hemant/uber")
-val header = dataset.first()
+val dataset = sc.textFile("/tmp/hemant/uber") -- hdfs location
+val header = dataset.first() -- Taking the first row of the dataset
 val format = new java.text.SimpleDateFormat("MM/dd/yyyy")
 var days =Array("Sun","Mon","Tue","Wed","Thu","Fri","Sat")
 val eliminate = dataset.filter(line => line != header)
